@@ -41,7 +41,7 @@ struct ContentView: View {
                                 Group {
                                     Text("Create user").color(Color.white).padding(12)
                                 }
-                                .background((firstName.count + lastName.count > 0) ? Color.blue : Color.gray)
+                                .background((!firstName.isEmpty && !lastName.isEmpty) ? Color.blue : Color.gray)
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
                                 .shadow(radius: 5)
                             }
