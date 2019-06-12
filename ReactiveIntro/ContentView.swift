@@ -48,7 +48,10 @@ struct ContentView: View {
                             Button(action: {
                                 self.users.removeAll()
                             }) {
-                                Text("Delete users")
+                                Group {
+                                    Text("Delete Users").color(.white).padding(12)
+                                }.background(Color.red).clipShape(RoundedRectangle(cornerRadius: 5))
+                                    .shadow(radius: 5)
                             }
                         }
                     }.padding(12)
